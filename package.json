@@ -2,16 +2,16 @@
   "name": "sass",
   "version": "2.0.0",
   "scripts": {
-    "start": "../WAR_FER_W_39_Sass_RWD/node_modules/.bin/gulp",
-    "build": "../WAR_FER_W_39_Sass_RWD/node_modules/.bin/gulp sass"
+    "start": "gulp",
+    "build": "gulp sass"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.5",
+    "browser-sync": "^2.27.9",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.42.1"
+    "sass": "^1.49.9"
   },
   "browserslist": [
     "defaults"
