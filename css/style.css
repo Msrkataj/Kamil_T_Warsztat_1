@@ -38,7 +38,7 @@ body {
 
 
 .logo {
-    font-size: 32px;
+    font-size: 2rem;
     font-family: var(--raleway);
     font-weight: 300;
     opacity: 1;
@@ -54,11 +54,11 @@ body {
 .nav-link {
     color: var(--color-grey);
     font-weight: 700;
-    font-size: 11px;
+    font-size: 0.6875rem;
     text-transform: uppercase;
     padding: 28px 18px 22px;
     border-bottom: 4px solid transparent;
-    letter-spacing: 3.28px;
+    letter-spacing: 0.1875rem;
     text-decoration: none;
 }
 
@@ -132,8 +132,7 @@ body {
 
 .section {
     padding: 100px;
-    width: 100%
-    display: inline-block;
+    width: 100%;
     position: center;
 }
 
@@ -356,10 +355,8 @@ body {
 .section-price {
     padding-top: 100px;
     height: 616px;
-    width: 1266px;
-
-
-}.price-body {
+}
+.price-body {
      display: flex;
      flex-wrap: wrap;
     justify-content: space-between;
@@ -457,7 +454,7 @@ body {
 }
 
 .btn {
-    background: var(--color-redish);
+    background: var(--color-primary);
     width: 150px;
     height: 50px;
     border-radius: 23px;
@@ -467,21 +464,30 @@ body {
     font-family: var(--openSans);
     font-size: 13px;
     padding: 16px 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-basic {
-    bottom: -95px;
-    left: 105px
+    bottom: -90px;
+    left: 105px;
+    background: var(--color-redish);
+
 }
 
 .btn-professional {
-    bottom: -116px;
+    bottom: -110px;
     left: 130px;
+    background: var(--color-primary);
+
 }
 
 .btn-premium {
-    bottom: -80px;
+    bottom: -75px;
     left: 108px;
+    background: var(--color-greenL);
+
 }
 
 .section-contact {
@@ -489,112 +495,158 @@ body {
     justify-content: center;
 }
 
-.container-contact {
-    width: 896px;
-    height: 376px;
-    margin-top: 155px;
+.contact {
+    padding: 80px 100px 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.contact__column {
+    width: 50%;
+}
+
+.contact__title {
+    font-size: 3.0625rem;
+    line-height: 3.6875rem;
+}
+
+.contact__instruction {
+    margin: 22px 0 42px;
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.contact__details {
     display: flex;
     justify-content: flex-start;
+    color: var(--color-grey);
+    align-items: center;
 }
 
-.contact-box {
-    width: 342px;
-    color: var(--color-black);
-    margin-right: 114px;
+.details__item {
+    color: var(--color-grey);
+    font-weight: 500;
+    text-decoration: none;
 }
 
-.contact-title {
-    font-family: var(--raleway);
-    font-size: 49px;
-    margin-bottom: 22px;
-    text-align: left;
-}
-
-.contact-text {
-    font-family: var(--openSans);
-    font-size: 16px;
-}
-
-.contact-info {
-    display: flex;
-    margin-top: 42px;
-    font-family: var(--openSans);
-    font-size: 16px;
-    color: var(--color-primary);
-}
-
-.contact-email {
+.details__item:first-of-type {
     margin-right: 20px;
 }
+
+.details__item img {
+    margin-right: 10px;
+}
+
 
 .form {
     display: flex;
     flex-direction: column;
 }
-.form-row {
+
+.form__field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-
 }
 
-.form-label {
-    font-family: var(--openSans);
-    font-style: 11px;
-    letter-spacing: 3.28px;
+.form__field:first-of-type {
+    margin-bottom: 42px;
+}
+
+.form__label {
+    font-weight: bold;
     text-transform: uppercase;
     color: var(--color-primary);
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    font-size: 0.6875rem;
 }
 
-.form-control{
-    margin-top: 42px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom-color: var(--color-primary);
-}
-.checkbox {
-    display: flex;
-}
-.checkbox input {
-    width: 24px;
-    height: 24px;
-}
-.checkbox input {
-    width: 22px;
-    height: 22px;
-    border: 1px solid #D1D1D1;
-    border-radius: 8px;
-    flex-shrink: 0;
-    appearance: none;
-    margin-right: 10px;
-}
-.checkbox span {
-    font-size: 12px;
-    line-height: 1.2;
-    color: #B2B2B2;
+.form__input {
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+    background-color: transparent;
+    line-height: 2.625rem;
 }
 
-.checkbox input:checked {
-    background-image: url("../images/icon_check.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 15px;
+.form__consent {
+    margin-top: 30px;
 }
-.form-row-last {
-    display: flex;
-    justify-content: flex-end;
-}
-.form-button {
-    width: 142px;
-    height: 44px;
-    border-radius: 40px;
-    border: 1px solid var(--color-primary);
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--color-white);
-    background: none;
+
+.form__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
     cursor: pointer;
-    font-size: 14px;
-    box-shadow:  0 3px 6px rgba(255,0,0,0.3);
+    font-size: 1.375rem;
 }
+
+.form__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form__checkbox .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+}
+
+.form__checkbox input:checked ~ .checkbox {
+    background-image: url(../assets/checkmark.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.form__checkbox .consent__text {
+    margin: 0 10px;
+    font-size: 0.75rem;
+    color: var(--color-grey);
+    line-height: 17px;
+}
+
+.form .btn {
+    font-size: 0.8125rem;
+    padding: 20px 97px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.footer {
+    box-shadow: 0 -5px 40px #00000029;
+    padding: 20px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__copy {
+    font-size: 0.6875rem;
+    line-height: 1.5rem;
+    color: var(--color-grey);
+    margin-top: 6px;
+}
+
+.footer__icons a:first-of-type {
+    margin-right: 25px;
+}
+
